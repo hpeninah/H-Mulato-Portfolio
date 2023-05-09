@@ -3,37 +3,28 @@ import { motion } from "framer-motion";
 
 const AnimatedText = ({ text, className = "" }) => {
   const quote = {
-    initial: { opacity: 0 },
+    initial: { 
+      opacity: 1 
+    },
     animate: {
       opacity: 1,
-      transition: { staggerChildren: 1, delay:0.5 },
+      transition: {
+        delay: 0.5,
+        staggerChildren: 0.08,
+      },
     },
   };
 
-  const child = {
+  const words = {
     initial: {
-      opacity: 1,
-      x: 0,
-      y:0,
-      transition: {
-        type: "spring",
-        damping: 12,
-        stiffness: 100,
-      },
-    },
-    hidden: {
       opacity: 0,
-      x: -20,
-      y: 10,
-      transition: {
-        type: "spring",
-        damping: 12,
-        stiffness: 100,
-      },
+      y: 50,
     },
-  };
-
-  const words = text.split(" ");
+    animate: {
+      opacity: 1,
+      y: 0,
+    }
+  }
 
   return (
     <div
@@ -41,16 +32,18 @@ const AnimatedText = ({ text, className = "" }) => {
     overflow-hidden"
     >
       <motion.h1
-        className={`inline-block w-full text-dark font-bold capitalized text-8xl ${className}`}
+        className={`inline-block w-full text-dark font-bold capitalized text-8xl ${className} load-screen--message`}
         variants={quote}
         initial="initial"
         animate="animate"
       >
-        {words.map((word, index) => [
-          <motion.span variants={child} className="inline-block" key={index}>
-            {word}&nbsp;
-          </motion.span>,
-        ])}
+        {text.split("").map((char, index) => {
+          return (
+            <motion.span key={char + "-" + index} variants={words}>
+              {char}
+            </motion.span>
+          )
+        })}
       </motion.h1>
     </div>
   );
