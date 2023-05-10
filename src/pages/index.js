@@ -1,12 +1,12 @@
 import Layout from "@/components/Layout";
-import Head from "next/head";
 import Image from "next/image";
 import profilePic from "../../public/images/profile/profile3.png";
 import AnimatedText from "../components/AnimatedText";
 import Link from "next/link";
 import { LinkArrow } from "@/components/Icons";
 import HireMe from "@/components/HireMe";
-//1:29:05
+import lightBulb from "../../public/images/svgs/miscellaneous_icons_1.svg";
+
 export default function Home() {
   return (
     <main className="flex items-center text-dark w-full min-h-screen">
@@ -16,7 +16,7 @@ export default function Home() {
             <Image
               src={profilePic}
               alt="Hannah Mulato"
-              className="w-full h-auto"
+              className="w-full max-h-screen"
             />
           </div>
           <div className="w-1/2 flex flex-col items-center self-center">
@@ -52,6 +52,9 @@ export default function Home() {
         </div>
       </Layout>
       <HireMe />
+      <div className="absolute right-8 bottom-8 inline-block w-24">
+        <Image src={lightBulb} alt="Hannah Mulato" className="w-full h-auto"></Image>
+      </div>
     </main>
   );
 }

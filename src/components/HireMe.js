@@ -1,5 +1,5 @@
 import React from "react";
-import { CircularText } from "./Icons";
+import { Circular, CircularText } from "./Icons";
 import Link from "next/link";
 
 const HireMe = () => {
@@ -9,7 +9,7 @@ const HireMe = () => {
     flex items-center justify-center overflow-hidden"
     >
       <div className="w-48 h-auto flex items-center justify-center relative">
-        <CircularText className={"fill-dark animate-spin-slow"} />
+        <Circular className={"fill-dark animate-spin-slow"} />
         <Link
           href="mailto:hpenmulato@gmail.com"
           className="flex items-center justify-center absolute
