@@ -441,6 +441,7 @@ export const CircularText = ({ className, ...rest }) => (
   </svg>
 );
 
+
 export const LinkArrow = ({ className, ...rest }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
