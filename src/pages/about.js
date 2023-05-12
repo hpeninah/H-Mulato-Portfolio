@@ -6,6 +6,9 @@ import Image from "next/image";
 import profilePic from "../../public/images/profile/profilePic.jpg";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import Skills from "@/components/Skills";
+import Experience from "@/components/Experience";
+
+//1:56:31
 
 const AnimatedNumbers = ({ value }) => {
   const ref = useRef(null);
@@ -39,7 +42,7 @@ const about = () => {
         <meta name="description" content="any description" />
       </Head>
       <main className="flex w-full flex-col items-center justify-center">
-        <Layout className="pt-16 px-16">
+        <Layout className="pt-10 px-40">
           <AnimatedText text="Vision with Purpose!" className="mb-16" />
           <div className="grid w-full grid-cols-8 gap-16">
             <div className="col-span-3 flex flex-col items-start justify-start">
@@ -67,7 +70,7 @@ const about = () => {
               </p>
             </div>
 
-            <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8 mb-10">
+            <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8">
               <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[102%] rounded-[2rem] bg-dark" />
               <Image
                 src={profilePic}
@@ -77,7 +80,7 @@ const about = () => {
             </div>
 
             <div className="col-span-2 flex flex-col items-end justify-between">
-              <div className="flex flex-col items-end justify-center">
+              <div className="flex flex-col items-center justify-center">
                 <span className="inline-block text-7xl font-bold">
                   <AnimatedNumbers value={50} />+
                 </span>
@@ -104,6 +107,7 @@ const about = () => {
             </div>
           </div>
           <Skills />
+          <Experience />
         </Layout>
       </main>
     </>
