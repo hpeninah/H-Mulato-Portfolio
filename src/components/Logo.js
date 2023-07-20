@@ -18,7 +18,11 @@ const Logo = () => {
           justify-center 
           rounded-full 
           text-2xl 
-          font-bold"
+          font-bold
+          border-2
+          border-solid
+          border-transparent
+          dark:border-light"
         whileHover={{
           backgroundColor: [
             "#121212",
