@@ -3,13 +3,10 @@ import Link from "next/link";
 import Logo from "./Logo";
 import { useRouter } from "next/router";
 import {
-  DribbbleIcon,
   GithubIcon,
   LinkedInIcon,
   SunIcon,
   MoonIcon,
-  PinterestIcon,
-  TwitterIcon,
 } from "./Icons";
 import { motion } from "framer-motion";
 import useThemeSwitcher from "./hooks/useThemeSwitcher";
@@ -115,14 +112,6 @@ const NavBar = () => {
 
         <nav className="flex items-center justify-center flex-wrap px-10">
           <motion.a
-            href="https://twitter.com"
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.9 }}
-            className="w-6 mx-3"
-          >
-            <TwitterIcon />
-          </motion.a>
-          <motion.a
             href="https://github.com"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
@@ -137,22 +126,6 @@ const NavBar = () => {
             className="w-6 mx-3"
           >
             <LinkedInIcon />
-          </motion.a>
-          <motion.a
-            href="https://pinterest.com"
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.9 }}
-            className="w-6 mx-3 bg-light rounded-full"
-          >
-            <PinterestIcon />
-          </motion.a>
-          <motion.a
-            href="https://dribble.com"
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.9 }}
-            className="w-6 mx-3"
-          >
-            <DribbbleIcon />
           </motion.a>
 
           <button
@@ -203,14 +176,6 @@ const NavBar = () => {
 
           <nav className="flex items-center justify-center flex-wrap px-10 mt-2">
             <motion.a
-              href="https://twitter.com"
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.9 }}
-              className="w-6 mx-3 sm:mx-1"
-            >
-              <TwitterIcon />
-            </motion.a>
-            <motion.a
               href="https://github.com"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
@@ -226,23 +191,6 @@ const NavBar = () => {
             >
               <LinkedInIcon />
             </motion.a>
-            <motion.a
-              href="https://pinterest.com"
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.9 }}
-              className="w-6 mx-3 sm:mx-1 bg-light rounded-full"
-            >
-              <PinterestIcon />
-            </motion.a>
-            <motion.a
-              href="https://dribble.com"
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.9 }}
-              className="w-6 mx-3 sm:mx-1"
-            >
-              <DribbbleIcon />
-            </motion.a>
-
             <button
               onClick={() => setMode(mode === "light" ? "dark" : "light")}
               className={`ml-3 flex items-center justify-center rounded-full p-1
